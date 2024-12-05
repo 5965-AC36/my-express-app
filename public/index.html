@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>伊美娜工程工费调研表</h1>
+        <form id="loginForm">
+            <div class="icon-input">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" placeholder="用户名" required>
+            </div>
+            <div class="icon-input">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="密码" required>
+            </div>
+            <button type="submit"><i class="fas fa-sign-in-alt"></i> 登录</button>
+        </form>
+        <form id="priceForm">
+            <select id="regionSelect">
+                <option value="上海">上海</option>
+                <option value="新疆">新疆</option>
+                <option value="酒泉">酒泉</option>
+                <option value="嘉峪关">嘉峪关</option>
+                <option value="西安">西安</option>
+                <option value="兰州">兰州</option>
+                <option value="郑州">郑州</option>
+                <option value="葫芦岛">葫芦岛</option>
+                <option value="烟台">烟台</option>
+                <option value="大连">大连</option>
+                <option value="沈阳">沈阳</option>
+                <option value="抚顺">抚顺</option>
+                <option value="邢台">邢台</option>
+                <option value="邯郸">邯郸</option>
+                <option value="保定">保定</option>
+                <option value="鞍山">鞍山</option>
+                <option value="锦州">锦州</option>
+            </select>
+            <select id="jobType">
+                <option value="油漆工">油漆工</option>
+                <option value="木工">木工</option>
+                <option value="电工">电工</option>
+                <option value="水管工">水管工</option>
+                <option value="小工">小工</option>
+                <option value="壁纸粘贴工">壁纸粘贴工</option>
+                <option value="瓦工">瓦工</option>
+                <option value="安装工">安装工</option>
+            </select>
+            <div class="icon-input">
+                <i class="fas fa-box"></i>
+                <input type="text" id="materialType" placeholder="材料类型" required>
+            </div>
+            <div class="icon-input">
+                <i class="fas fa-truck"></i>
+                <input type="text" id="supplier" placeholder="供应商" required>
+            </div>
+            <div class="icon-input">
+                <i class="fas fa-tag"></i>
+                <input type="text" id="itemName" placeholder="项目名称" required>
+            </div>
+            <div class="icon-input">
+                <i class="fas fa-ruler"></i>
+                <input type="text" id="unit" placeholder="单位" required>
+            </div>
+            <div class="icon-input">
+                <i class="fas fa-sort-numeric-up"></i>
+                <input type="number" id="quantity" placeholder="数量" required min="0">
+            </div>
+            <div class="icon-input">
+                <i class="fas fa-yen-sign"></i>
+                <input type="number" id="itemPrice" placeholder="价格" required min="0">
+            </div>
+            <button type="submit"><i class="fas fa-plus"></i> 添加价格</button>
+        </form>
+        <input type="text" id="searchBox" placeholder="搜索项目...">
+        <input type="text" id="priceLookup" placeholder="查找单价...">
+        <input type="text" id="regionFilter" placeholder="输入地区名称">
+        <input type="text" id="compositeFilter" placeholder="工种">
+        <button id="filterBtn"><i class="fas fa-search"></i> 查找地区工价</button>
+        <input type="file" id="importFile" accept=".csv">
+        <button id="importBtn"><i class="fas fa-file-import"></i> 导入CSV</button>
+        <button id="exportBtn"><i class="fas fa-file-export"></i> 导出为CSV</button>
+        <ul id="priceList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
